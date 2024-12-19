@@ -1,6 +1,4 @@
 ﻿using DataAccessGeneral.Interfaces.Reporsitory;
-using DataAccessGeneral.Models;
-using DataAccessNoSql;
 using DataAccessSql.Repository;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,6 +11,5 @@ public static class RepositoryRegistration
         service.AddScoped<IOrderRepository, OrderRepository>();
         service.AddScoped<IPizzaRepository, PizzaRepository>();
         service.AddScoped<IIngredientRepository, IngredientRepository>();
-        service.AddScoped<INoSqlReposytory<Pizza>, NoSqlReposytory<Pizza>>();
     }
 }
